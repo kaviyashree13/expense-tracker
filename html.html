@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Enhanced Expense Tracker</h1>
+
+        <!-- Expense Form -->
+        <form id="expense-form">
+            <input type="text" id="expense-name" placeholder="Expense Name" required>
+            <input type="number" id="expense-amount" placeholder="Amount" min="0" required>
+            
+            <!-- Category Selector -->
+            <select id="expense-category" required>
+                <option value="">Select Category</option>
+                <option value="Food">Food</option>
+                <option value="Transportation">Transportation</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Utilities">Utilities</option>
+                <option value="Others">Others</option>
+            </select>
+
+            <!-- Date Picker -->
+            <input type="date" id="expense-date" required>
+
+            <button type="submit">Add Expense</button>
+        </form>
+
+        <!-- Sort and Filter Section -->
+        <div class="sort-options">
+            <button id="sort-asc">Sort by Amount (Ascending)</button>
+            <button id="sort-desc">Sort by Amount (Descending)</button>
+            <select id="filter-category">
+                <option value="">Filter by Category</option>
+                <option value="Food">Food</option>
+                <option value="Transportation">Transportation</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Utilities">Utilities</option>
+                <option value="Others">Others</option>
+            </select>
+        </div>
+
+        <h2>Total Expenses: $<span id="total-expenses">0.00</span></h2>
+
+        <!-- Expense Summary by Category -->
+        <div id="category-summary">
+            <h3>Summary by Category:</h3>
+            <ul id="category-summary-list"></ul>
+        </div>
+
+        <!-- Expense List -->
+        <ul id="expense-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
